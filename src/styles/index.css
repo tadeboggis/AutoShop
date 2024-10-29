@@ -1,0 +1,28 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: auto;
+  font-family: 'Arial', sans-serif;
+  background-color: #f8f9fa;
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 15px;
+  }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  text-decoration: underline;
+}

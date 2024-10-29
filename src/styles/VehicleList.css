@@ -1,0 +1,55 @@
+.vehicle-list-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+}
+  
+.category-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #dfbd34;
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+  
+.vehicle-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+}
+  
+.item-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    width: 200px;
+    text-align: center;
+    background-color: #f9f9f9;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.item-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.15);
+    background-color: #f1f1f1;
+}
+  
+.item-card img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+}
+  
+.vehicle-list p {
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+}
+
+@media (max-width: 600px) {
+    .item-card {
+        width: 150px;
+    }
+}
