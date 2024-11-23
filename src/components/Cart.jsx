@@ -11,10 +11,12 @@ const Cart = () => {
     price.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
   const handleWhatsAppRedirect = () => {
-    const itemsDescription = cart.map(item => `${item.quantity}x ${item.name}`).join(", ");
-    const message = encodeURIComponent(`Hola, quiero finalizar mi compra de ${itemsDescription} por un total de $${formatPrice(total)}.`);
-    const phoneNumber = "549123456789"; 
-    window.open(`https://wa.me/${phoneNumber}?text=${message}`, "_blank");
+    const itemsDescription = cart.map((item) => `${item.quantity}x ${item.name}`).join(', ');
+    const message = encodeURIComponent(
+      `Hola, quiero finalizar mi compra de ${itemsDescription} por un total de $${formatPrice(total)}.`
+    );
+    const phoneNumber = '549123456789';
+    window.open(`https://wa.me/${phoneNumber}?text=${message}`, '_blank');
   };
 
   return (
@@ -32,17 +34,19 @@ const Cart = () => {
                   <p className="cart-item-name">{item.name}</p>
                   <p className="cart-item-price">Precio: ${formatPrice(item.price)}</p>
                   <div className="cart-item-quantity">
-                    <button onClick={() => decrementQuantity(item.id)} className="quantity-button">-</button>
+                    <button onClick={() => decrementQuantity(item.id)} className="quantity-button">
+                      -
+                    </button>
                     <span>{item.quantity}</span>
-                    <button onClick={() => incrementQuantity(item.id)} className="quantity-button">+</button>
+                    <button onClick={() => incrementQuantity(item.id)} className="quantity-button">
+                      +
+                    </button>
                   </div>
                 </div>
               </li>
             ))}
           </ul>
-          <div className="cart-total">
-            Total: ${formatPrice(total)}
-          </div>
+          <div className="cart-total">Total: ${formatPrice(total)}</div>
           <button className="cart-checkout-button" onClick={handleWhatsAppRedirect}>
             Finalizar Compra
           </button>

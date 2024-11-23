@@ -33,11 +33,11 @@
 }
 
 .carousel-button.left {
-    left: 10px;
+    left: 20px;
 }
 
 .carousel-button.right {
-    right: 10px;
+    right: 20px;
 }
 
 .carousel-button:hover {

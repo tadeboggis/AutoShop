@@ -36,7 +36,7 @@ export const CartProvider = ({ children }) => {
             ? { ...item, quantity: item.quantity - 1 }
             : item
         )
-        .filter((item) => item.quantity > 0) // Eliminar artículos con cantidad 0
+        .filter((item) => item.quantity > 0)
     );
   };
 

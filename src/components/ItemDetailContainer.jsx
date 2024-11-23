@@ -3,11 +3,11 @@ import { useParams } from 'react-router-dom';
 import vehicles from '../mockData/mockData';
 import { useCart } from '../context/CartContext';
 import Carousel from './Carousel';
-import '../styles/ItemDetail.css';
+import '../styles/ItemDetailContainer.css';
 
 const ItemDetailContainer = () => {
   const { id } = useParams();
-  const vehicle = vehicles.find(v => v.id === parseInt(id));
+  const vehicle = vehicles.find((v) => v.id === parseInt(id));
   const { addToCart } = useCart();
 
   const handleAddToCart = () => {

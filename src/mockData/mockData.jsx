@@ -68,6 +68,7 @@ const vehicles = [
     description: 'Sedán eléctrico de lujo con gran autonomía.', 
     image: '/images/models.jpg', 
     images: ['models.jpg', 'models2.jpg', 'models3.jpg'], 
+    price: 80000,
     category: 'Eléctricos' 
   },
   { 
@@ -76,7 +77,7 @@ const vehicles = [
     description: 'Pickup eléctrica poderosa y eficiente.', 
     image: '/images/silverado.jpg', 
     images: ['silverado.jpg', 'silverado-2.jpg', 'silverado-3.jpg'], 
-    price: 80000,
+    price: 90000,
     category: 'Eléctricos' 
   }
 ];
